@@ -39,7 +39,36 @@ Data Type	Example
 // 2.   A variable’s type can change at runtime.
 // **************Example***************
 /*
+
 let x = 5;         // x is a Number
 x = "Usman";       // now x is a String
 x = true;          // now x is a Boolean
 */
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Stack Memory:
+//  (Stack memory is used for storing primitive values )(LIFO - Last In, First Out) ,
+//  Stores copy of the value.
+  //************Example****************/
+ /*
+              let a = 10;
+              let b = a;   Copy of a
+              b = 20;
+              console.log(a); // 10 ✅ (original not changed)
+              console.log(b); // 20
+ */ 
+
+//Heap Memory :
+//  (Heap memory is used to store reference types (objects, arrays, functions)) 
+//  Stores reference (address) of the value.
+//  Anything created using {} or [].
+    //**************Example******************/
+     /*
+            let obj1 = { 
+            name: "Usman"
+             };
+             let obj2 = obj1;  //reference of obj1
+             obj2.name = "Ali";
+             console.log(obj1.name); // Ali ✅ (original also changed)
+             console.log(obj2.name); // Ali
+     */
