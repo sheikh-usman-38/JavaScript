@@ -72,3 +72,27 @@ console.log(tinderUser); //{ id: 1234, name: 'usman', email: 'usman@google.com' 
 ]   */
  //Check in object it has this property or not 
 console.log(tinderUser.hasOwnProperty("email")); //true
+
+//++++++++++++++++++++++++++++Destructuring in Object++++++++++++++++++++++++++ 
+//Breaking an object into smaller parts (variables) easily
+ const course={
+    name:" Muhammad Usman",
+    gender:"Male",
+    courseInstructor:"hitesh Choudhary"
+ }
+ let {courseInstructor:instructor} = course;
+ console.log(instructor);  //hitesh Choudhary
+
+ //*******************Json(JavaScript Object Notation) Data Formate**************/
+//  {
+//     "name": "usman shiekh",
+//     "email": "usman@gmail.com",
+// }
+//Json responce also meet like this
+[
+    {},
+    {},
+    {}
+]
+// API of Random User Generator : https://randomuser.me/api/
+
