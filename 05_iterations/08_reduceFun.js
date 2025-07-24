@@ -30,4 +30,18 @@ acc: 10, currVal: 5
   */
    return acc + currVal;
 },0)
+
+//Also write Like this
+// const myNum = numbers.reduce((acc, currVal) => acc + currVal, 0);
+
 console.log(myNum); // Expected output: 15
+
+const shoppingCart = [
+  { name: 'Apple', price: 1.2 },
+  { name: 'Banana', price: 0.8 },
+  { name: 'Cherry', price: 2.5 },
+];
+const price = shoppingCart.reduce((acc, item) => (
+  acc+ item.price
+),0);
+console.log(price); // Expected output: 4.5
