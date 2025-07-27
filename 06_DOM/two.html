@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+    <script>
+        const parent = document.querySelector(".parent");
+    //    console.log(parent);
+     //   console.log(parent.children);
+      //  console.log(parent.children[0].innerHTML);
+
+        for(let i=0 ;i< parent.children.length;i++){
+     //       console.log(parent.children[i].innerHTML);
+        }
+        parent.children[1].style.color="red";
+   //    console.log(parent.firstElementChild); //<div class="day">Monday</div>
+   //    console.log(parent.lastElementChild); //<div class="day">Thursday</div>
+
+   const dayOne = document.querySelector(".day");
+   console.log(dayOne); //<div class="day">Monday</div>
+   console.log(dayOne.parentElement); // Here is return a parent div and include all child
+   console.log(dayOne.nextElementSibling); // <div class="day">Tuesday</div>
+
+   console.log(parent.childNodes);//when we press Enter(btn) so it give text node 
+   //************************ChildNodes******************************
+   /*
+   parent.childNodes gives you a list of everything inside the parent —
+    not just elements, but also:
+                                   Text
+                            Line breaks (enter/space)
+                                   Comments
+                            HTML elements (like <p>, <div>, etc.)
+*/
+  
+
+    </script>
+</body>
+</html>

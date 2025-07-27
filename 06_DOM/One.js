@@ -1,4 +1,7 @@
 /*
+      //+++++++++++++++++one.html +++++++++++++++++++
+     // this file we used to access element.
+     
 document.getElementById("title");   // access id 
 document.getElementById('title').getAttribute('class'); //'heading'
 document.getElementById('title').setAttribute('class',"text heading");   // change class name 
