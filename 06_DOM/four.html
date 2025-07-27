@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Code | DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+
+       <ul class="language">
+              <li>Javascript</li>
+        </ul>
+
+</body>
+<script>
+    function addLang(langName){
+   const li = document.createElement('li');
+      li.innerHTML=`${langName}`;
+   document.querySelector(".language").appendChild(li);   
+/*
+       If you already have 1000 <li> items, and you use appendChild(), the browser has to:
+                       Go through all 1000 items
+                       Then add your new item at the end
+                       🔻 So it's slow when the list is big.
+*/
+    }
+    addLang("paython");
+    addLang("Java");
+
+    //Another Optimize Way
+    function addOptiLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${langName}`))
+         document.querySelector(".language").appendChild(li);   
+//This directly inserts your new <li> at the top — no need to scan all 1000 items.
+    }
+    addOptiLang("C#");
+
+    //Edit
+     const secondLi = document.querySelector('li:nth-child(2)');
+    // secondLi.innerHTML="C++";
+    //Another Optimize way 
+    const newLi = document.createElement('li');
+    newLi.textContent="C++";
+    secondLi.replaceWith(newLi);
+
+    //edit
+    const firstLi = document.querySelector('li:first-child');
+    firstLi.outerHTML="<li>TypeScript</li>"
+
+   //Remove
+   const lastLi =document.querySelector('li:last-child');
+   lastLi.remove();
+    </script>
+</html>
